@@ -1,0 +1,68 @@
+html, body, #root {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(255, 255, 255);
+    --shadow-color: rgba(0, 0, 0, 0.89);
+}
+
+.bottom {
+    max-height: 55%;
+    width: auto;
+    position: absolute;
+    bottom: 0px;
+    display: block;
+    z-index: 1;
+}
+
+.face {
+    max-height: 15%;
+    width: auto;
+    position: absolute;
+    top: 5%;
+    display: block;
+    z-index: 3;
+}
+
+.top {
+    max-height: 35%;
+    width: auto;
+    position: absolute;
+    top: 15%;
+    display: block;
+    z-index: 2;
+}
+
+.sock {
+    max-width: 30%;
+    height: auto;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    display: block;
+    z-index: 2;
+}
+
+img:hover {
+    -webkit-filter: drop-shadow(1px 1px 1px var(--shadow-color));
+    filter: drop-shadow(1px 1px 1px var(--shadow-color));
+    cursor: pointer;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+.body {
+    position: relative;
+    width: clamp(200px, 60%, 400px);
+    height: clamp(300px, 90%, 600px);
+    display: flex;
+    justify-content: center;
+    aspect-ratio: 2 / 3;
+}
