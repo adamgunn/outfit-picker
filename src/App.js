@@ -51,7 +51,8 @@ function App() {
 		setImages({ ...images, face: face });
 	}
 
-	const newEverything = () => {
+	const newEverything = (e) => {
+		if (e.target.tagName.toLowerCase() === 'img') return;
 		let top = images.top;
 		let bottom = images.bottom;
 		let sock = images.sock;
